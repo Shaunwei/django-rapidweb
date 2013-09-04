@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Rapid Web Dev</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="descripiton" content="">
+	<meta name="author" content="Shaun Wei">
+
+	<!-- Le styles -->
+	{% load staticfiles %}
+	<link href="{% static 'css/bootstrap.css'" rel="stylesheet">
+
+	<style>
+		body{
+			padding-top:20px;
+			padding-bottom: 40px;
+		}
+
+		.container-narrow{
+			margin: 0 auto;
+			max-width: 700px;
+		}
+
+		.container-narrow > hr {
+			margin: 30px 0;
+		}
+
+		.jumbotron{
+			margin:60px 0;
+			text-align: center;
+		}
+
+		.jumbotron h1{
+			font-size: 72px;
+			line-height: 1;
+		}
+
+		.jumbotron .btn {
+			font-size: 21px;
+			padding: 14px 24px;
+		}
+		/* Supporting marketing content */
+		.marketing {
+			margin: 60px 0;
+		}
+		.marketing p + h4 {
+			margin-top: 28px;
+		}	
+	</style>	
+</head>
+
+<body>
+
+	<div class="container-narrow">
+
+		<div class="masthead">
+			<ul class="nav nav-pills pull-right">
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+
+			<h3><span class="fui-setting-16 muted">Learning Rapid Wed Dev!</span></h3>
+		</div>
+
+		<hr>
+
+		{% if messages %}
+		<div class="alert alert-success">
+			<div class="messages">
+				{% for message in messages%}
+				{{message}}
+				{% endfor %}
+			</div>
+		</div>
+		{% endif %}
+
+
+		<div class="container-narrow">
+			{% block content %}
+			{% endblock %}
+		</div>
+
+		<hr>
+
+		<div class="footer">
+			<p>Copyright 2013</p>
+			<p>Developed by Xiao Wei. Powered by Django, Bootstrap, RealPython</p>
+		</div>
+
+	</div>
+
+</body>
+</html>
