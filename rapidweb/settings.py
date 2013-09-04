@@ -1,4 +1,7 @@
 # Django settings for rapidweb project.
+import os
+PORJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+SITE_ROOT = os.path.dirname(PORJECT_ROOT)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -111,6 +114,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(SITE_ROOT,'templates'),
 )
 
 INSTALLED_APPS = (
@@ -121,9 +125,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'main',
 )
 
 # A sample logging configuration. The only tangible logging
