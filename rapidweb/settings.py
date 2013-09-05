@@ -1,12 +1,13 @@
 # Django settings for rapidweb project.
 import os
-PORJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
-SITE_ROOT = os.path.dirname(PORJECT_ROOT)
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+SITE_ROOT = os.path.dirname(PROJECT_ROOT)
+PROJECT_PATH = os.path.dirname(os.path.realpath(os.path.dirname(__file__)))
 
 STRIPE_SECRET = 'sk_test_h36oicOrlA7ATkI9JJ6dUGyA'
 STRIPE_PUBLISHABLE = 'pk_test_8Xho4FfArFFuQspdH8V1KlHS'
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -78,7 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(SITE_ROOT,'static'),
+    os.path.join(PROJECT_PATH,'static'),
 )
 
 # List of finder classes that know how to find static files in
