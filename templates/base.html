@@ -10,7 +10,7 @@
 
 	<!-- Le styles -->
 	{% load staticfiles %}
-	<link href="{% static 'css/bootstrap.css'" rel="stylesheet">
+	<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
 
 	<style>
 		body{
@@ -58,8 +58,8 @@
 		<div class="masthead">
 			<ul class="nav nav-pills pull-right">
 				<li><a href="{% url 'home' %}">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="/pages/about">About</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
 			</ul>
 
 			<h3><span class="fui-setting-16 muted">Learning Rapid Wed Dev!</span></h3>
