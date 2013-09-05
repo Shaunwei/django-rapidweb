@@ -7,7 +7,7 @@ PROJECT_PATH = os.path.dirname(os.path.realpath(os.path.dirname(__file__)))
 STRIPE_SECRET = 'sk_test_h36oicOrlA7ATkI9JJ6dUGyA'
 STRIPE_PUBLISHABLE = 'pk_test_8Xho4FfArFFuQspdH8V1KlHS'
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
