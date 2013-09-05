@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load staticfiles %}
   <div class="row">
     <div class="span6 columns">
     </div>
@@ -7,4 +8,29 @@
   <h1>Member's Only Page</h1><br/>
   <h3>Welcome {{ user.name }}.</h3>
   <p>Click <a href="{% url 'edit' %}">here</a> to make changes to your credit card.</p>
+  <div class="container">  
+      <!-- Example row of columns -->  
+      <div class="row">  
+        <div class="span4">  
+          <h2>Congrats, You made this far!</h2>  
+          <p> </p>  
+          <div id="myCarousel" class="carousel slide"> 
+          <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+	  </ol> 
+            <!-- Carousel items -->  
+          <div class="carousel-inner">  
+        <div class="item active"><img src="{% static 'img/browser-icon-chrome.png' %}" width="500" height="500" alt="chrome logo" /></div>  
+        <div class="item"><img src="{% static 'img/browser-icon-firefox.png' %}" width="500" height="500" alt="firefox logo" /></div>
+        <div class="item"><img src="{% static 'img/browser-icon-safari.png' %}" width="500" height="500" alt="safari logo" /></div>  
+  </div>  
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>  
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>  
+</div>  
+</div>  
+</div>  
+</div>
 {% endblock %}

@@ -40,3 +40,6 @@ $(function() {
   });
 
 });
+
+$('.carousel').carousel('cycle');
+
