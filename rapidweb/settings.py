@@ -3,6 +3,9 @@ import os
 PORJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 SITE_ROOT = os.path.dirname(PORJECT_ROOT)
 
+STRIPE_SECRET = 'sk_test_h36oicOrlA7ATkI9JJ6dUGyA'
+STRIPE_PUBLISHABLE = 'pk_test_8Xho4FfArFFuQspdH8V1KlHS'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -38,7 +41,7 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 2
+SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.

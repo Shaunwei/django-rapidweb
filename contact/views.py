@@ -12,7 +12,7 @@ def contact(request):
 		messages.add_message(request, messages.INFO, 'Your message has been sent. Thank you.')
 		return HttpResponseRedirect('/')
 	t = loader.get_template('contact.html')
-	c = RequestContext(request, {'form':form ,})
+	c = RequestContext(request, {'form':form ,'user':[],})
 	return HttpResponse(t.render(c))
 
 	
